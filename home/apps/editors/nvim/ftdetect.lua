@@ -23,6 +23,15 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 })
 
 
+-- TSV files → csv filetype with tab delimiter (for csv.vim)
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.tsv", "*.tab" },
+  callback = function()
+    vim.bo.filetype = "csv"
+    vim.b.csv_delimiter = "\t"
+  end,
+})
+
 -- Hugo projects
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.html",

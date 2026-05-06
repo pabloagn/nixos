@@ -204,7 +204,12 @@
       "Bash(nix search:*)",
       "Bash(ls -1 /home/pabloagn/dev/rhodium/home/utils/files/yazi/plugins/*.lua | sort)",
       "Bash(ls -la /home/pabloagn/dev/rhodium/home/utils/files/yazi/plugins/*.lua)",
-      "Bash(which z:*)"
+      "Bash(which z:*)",
+      "Bash(git log:*)",
+      "Bash(curl -sL \"https://api.github.com/repos/adriankarlen/textfox/contents/\" | python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(f['name']\\) for f in data]\" 2>/dev/null || curl -sL \"https://api.github.com/repos/adriankarlen/textfox/contents/\" | head -50)",
+      "Bash(nix-env -qaP -A nixos.vimPlugins 2>/dev/null | grep -i csv)",
+      "Bash(nix-env -qaP -A nixos.vimPlugins 2>/dev/null | grep -iE 'rainbow|csvview|table-mode')",
+      "Bash(nix-env -qaP -A nixos.vimPlugins 2>/dev/null | grep -iE 'rainbow.csv|RainbowCSV|csvlens')"
     ]
   },
   "enableAllProjectMcpServers": true,

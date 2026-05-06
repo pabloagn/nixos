@@ -545,6 +545,28 @@
         ];
       }
 
+      # --- Tabular Data Files ---
+      {
+        url = "*.{csv,tsv,tab,psv}";
+        use = [
+          "edit"
+          "edit-helix"
+          "edit-zed"
+          "edit-nano"
+          "edit-emacs"
+          "libreoffice-calc"
+          "reveal"
+        ];
+      }
+      # Parquet files (data engineering)
+      {
+        url = "*.parquet";
+        use = [
+          "edit"
+          "reveal"
+        ];
+      }
+
       # --- Code Files (by MIME type) ---
       {
         mime = "text/*";
@@ -641,26 +663,7 @@
       }
 
       # --- Tabular Data Files ---
-      {
-        url = "*.{csv,tsv,tab,psv}";
-        use = [
-          "libreoffice-calc"
-          "edit"
-          "edit-helix"
-          "edit-zed"
-          "edit-nano"
-          "edit-emacs"
-          "reveal"
-        ];
-      }
-      # Parquet files (data engineering)
-      {
-        url = "*.parquet";
-        use = [
-          "edit"
-          "reveal"
-        ];
-      }
+      # NOTE: CSV/TSV/Parquet rules moved above mime = "text/*" to ensure they match first
       # JSON/NDJSON files (structured data)
       {
         url = "*.{json,ndjson,jsonl}";

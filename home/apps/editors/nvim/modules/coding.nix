@@ -54,6 +54,12 @@
       #   config = sourceLuaFile "lazydev-nvim.lua";
       # }
 
+      # CSV/TSV viewing
+      {
+        plugin = csv-vim;
+        config = sourceLuaFile "csv-vim.lua";
+      }
+
       vim-nix
 
       {
