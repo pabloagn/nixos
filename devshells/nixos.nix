@@ -20,7 +20,7 @@ pkgs-shell.mkShell {
 
     # --- Utils ---
     pkgs-unstable.claude-code
-    codex
-    gemini-cli
+    pkgs-unstable.codex
+    pkgs-unstable.gemini-cli
   ];
 }
